@@ -1,0 +1,297 @@
+BinaryNavMap:
+*************************************
+uskudar->istanbul
+  kadıkoy->istanbul
+    cekirge->bursa
+      aksaray->istanbul
+        null
+        biga->canakkale
+          null
+          null
+      gebze->kocaeli
+        foca->izmir
+          null
+          null
+        null
+    niksar->tokat
+      kecıoren->ankara
+        kahta->adıyaman
+          null
+          null
+        manavgat->antalya
+          null
+          null
+      null
+  null
+
+*************************************
+
+turkey.lowerEntry("niksar")	:foca=izmir
+turkey.lowerKey("niksar")	:foca
+turkey.floorEntry("niksar")	:niksar=tokat
+turkey.floorKey("niksar")	:niksar
+turkey.ceilingEntry("niksar")	:kadıkoy=istanbul
+turkey.ceilingKey("niksar")	:kadıkoy
+turkey.higherEntry("niksar")	:kadıkoy=istanbul
+turkey.higherKey("niksar")	:kadıkoy
+turkey.firstEntry()		:biga=canakkale
+turkey.firstKey()		:biga
+turkey.lastEntry()		:uskudar=istanbul
+turkey.descendingKeySet()	:[uskudar, niksar, manavgat, kecıoren, kahta, kadıkoy, gebze, foca, cekirge, biga, aksaray]
+turkey.descendingMap()		:{uskudar=istanbul, niksar=tokat, manavgat=antalya, kecıoren=ankara, kahta=adıyaman, kadıkoy=istanbul, gebze=kocaeli, foca=izmir, cekirge=bursa, biga=canakkale, aksaray=istanbul}
+turkey.tailMap("niksar")	:{niksar=tokat, uskudar=istanbul}
+turkey.headMap("niksar")	:{aksaray=istanbul, cekirge=bursa, foca=izmir, gebze=kocaeli, kecıoren=ankara, manavgat=antalya, niksar=tokat}
+turkey.subMap("aksaray", "gebze"):{aksaray=istanbul, biga=canakkale, foca=izmir, gebze=kocaeli}
+turkey.navigableKeySet()	:[aksaray, biga, cekirge, foca, gebze, kadıkoy, kahta, kecıoren, manavgat, niksar, uskudar]
+turkey.pollLastEntry()		:uskudar=istanbul
+turkey.pollFirstEntry()		:biga=canakkale
+turkey.subMap("uskudar",true,"gebze",false):{aksaray=istanbul, foca=izmir, gebze=kocaeli}
+turkey.put("edremit","balikesir");
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+*************************************
+Size 1
+turkey.put("edremit","van");
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+*************************************
+Size 1
+turkey.put("kemalpasa","bursa");
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+*************************************
+Size 2
+turkey.put("kemalpasa","izmir");
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+*************************************
+Size 2
+turkey.put("ortakoy","istanbul")
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = ortakoy, value = istanbul	}
+*************************************
+Size 3
+turkey.put("ortakoy","aksaray");
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+*************************************
+Size 3
+turkey.put("ortakoy","corum");
+Table Chaning:
+*************************************
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 3
+turkey.put("kecıoren","ankara");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 4
+turkey.put("pinarbasi","kastamonu");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 5
+turkey.put("pinarbasi","kayseri");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 5
+turkey.put("eregli","konya");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 6
+turkey.put("eregli","tekirdag");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = eregli, value = tekirdag	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 6
+turkey.put("eregli","zonguldak");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = eregli, value = tekirdag	}
+Entry{	key = eregli, value = zonguldak	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 6
+turkey.put("golbasi","adıyaman");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = eregli, value = tekirdag	}
+Entry{	key = eregli, value = zonguldak	}
+Entry{	key = golbasi, value = adıyaman	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 7
+turkey.put("golbasi","ankara");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = eregli, value = tekirdag	}
+Entry{	key = eregli, value = zonguldak	}
+Entry{	key = golbasi, value = adıyaman	}
+Entry{	key = golbasi, value = ankara	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 7
+turkey.put("biga","canakkale");
+Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = biga, value = canakkale	}
+Entry{	key = edremit, value = balikesir	}
+Entry{	key = edremit, value = van	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = eregli, value = tekirdag	}
+Entry{	key = eregli, value = zonguldak	}
+Entry{	key = golbasi, value = adıyaman	}
+Entry{	key = golbasi, value = ankara	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+Size 8
+turkey.get("edremit")	:balikesir
+turkey.get("kemalpasa")	:bursa
+turkey.get("ortakoy")	:istanbul
+turkey.get("kecıoren")	:ankara
+turkey.get("pinarbasi")	:kastamonu
+turkey.get("golbasi")	:adıyaman
+turkey.get("eregli")	:konya
+turkey.get("biga")	:canakkale
+
+turkey.get("edremit")	:balikesir
+
+turkey.remove("edremit")	:balikesir
+turkey.remove("edremit")	:van
+turkey.remove("edremit")	:null
+Size 7
+ToString Table Chaning:
+*************************************
+Entry{	key = kecıoren, value = ankara	}
+Entry{	key = biga, value = canakkale	}
+Entry{	key = kemalpasa, value = bursa	}
+Entry{	key = kemalpasa, value = izmir	}
+Entry{	key = eregli, value = konya	}
+Entry{	key = eregli, value = tekirdag	}
+Entry{	key = eregli, value = zonguldak	}
+Entry{	key = golbasi, value = adıyaman	}
+Entry{	key = golbasi, value = ankara	}
+Entry{	key = pinarbasi, value = kastamonu	}
+Entry{	key = pinarbasi, value = kayseri	}
+Entry{	key = ortakoy, value = istanbul	}
+Entry{	key = ortakoy, value = aksaray	}
+Entry{	key = ortakoy, value = corum	}
+*************************************
+All test DONE!!! 
